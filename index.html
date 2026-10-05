@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FreshMart Grocery</title>
+
+    <link rel="stylesheet" href="0010MirandaStyle.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+
+            <a href="#home" class="logo">FreshNest</a>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#categories">Categories</a>
+                <a href="#products">Products</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <a href="#signin" class="login-button">Sign In</a>
+
+            <span class="cart">
+                🛒Cart (<span id="cartCount">0</span>)
+            </span>
+
+        </nav>
+    </header>
+
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+
+        <div class="hero-text">
+
+            <span class="small-title">FRESH EVERY DAY</span>
+
+            <h1>
+                Fresh Food.<br>
+                Delivered <span>To You.</span>
+            </h1>
+
+            <p>
+                Shop fresh fruits, vegetables and daily essentials
+                at affordable prices.
+            </p>
+
+            <a href="#products" class="shop-button">
+                Shop Now →
+            </a>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <img src="images/vegetables.avif"
+                 alt="Fresh vegetables">
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+    <section id="categories" class="section">
+
+        <div class="section-heading">
+            <div>
+                <span>SHOP BY CATEGORY</span>
+                <h2>Popular Categories</h2>
+            </div>
+
+            <a href="#products">View All →</a>
+        </div>
+
+
+        <div class="category-container">
+
+            <a href="#products" class="category-card">
+                <div class="category-icon">🥬</div>
+                <h3>Vegetables</h3>
+                <p>Fresh vegetables</p>
+            </a>
+
+            <a href="#products" class="category-card">
+                <div class="category-icon">🍎</div>
+                <h3>Fruits</h3>
+                <p>Fresh fruits</p>
+            </a>
+
+            <a href="#products" class="category-card">
+                <div class="category-icon">🥛</div>
+                <h3>Dairy</h3>
+                <p>Milk & dairy</p>
+            </a>
+
+            <a href="#products" class="category-card">
+                <div class="category-icon">🍞</div>
+                <h3>Bakery</h3>
+                <p>Fresh bakery</p>
+            </a>
+
+            <a href="#products" class="category-card">
+                <div class="category-icon">🥩</div>
+                <h3>Meat</h3>
+                <p>Fresh meat</p>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <section id="products" class="section products-section">
+
+        <div class="section-heading">
+
+            <div>
+                <span>FRESH PICKS</span>
+                <h2>Best Selling Products</h2>
+            </div>
+
+            <button onclick="showProducts()">Show All</button>
+
+        </div>
+
+
+        <div class="product-container">
+
+
+            <!-- PRODUCT 1 -->
+            <div class="product-card">
+
+                <img src="images/tomato.jpeg"
+                     alt="Tomatoes">
+
+                <h3>Organic Tomatoes</h3>
+
+                <p class="product-type">Local Farm</p>
+
+                <h4>₱85 <small>/ kg</small></h4>
+
+                <button onclick="addToCart('Organic Tomatoes')">
+                    + Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+            <div class="product-card">
+
+                <img src="images/Banana.jpg"
+                     alt="Bananas">
+
+                <h3>Fresh Bananas</h3>
+
+                <p class="product-type">Local Farm</p>
+
+                <h4>₱70 <small>/ kg</small></h4>
+
+                <button onclick="addToCart('Fresh Bananas')">
+                    + Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+            <div class="product-card">
+
+                <img src="images/potato.jfif"
+                     alt="Potatoes">
+
+                <h3>Fresh Potatoes</h3>
+
+                <p class="product-type">Local Farm</p>
+
+                <h4>₱95 <small>/ kg</small></h4>
+
+                <button onclick="addToCart('Fresh Potatoes')">
+                    + Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT 4 -->
+            <div class="product-card">
+
+                <img src="images/strawberry.jfif"
+                     alt="Strawberries">
+
+                <h3>Fresh Strawberries</h3>
+
+                <p class="product-type">Local Farm</p>
+
+                <h4>₱180 <small>/ pack</small></h4>
+
+                <button onclick="addToCart('Fresh Strawberries')">
+                    + Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT 5 -->
+            <div class="product-card">
+
+                <img src="images/apple.jfif"
+                     alt="Apples">
+
+                <h3>Fresh Apples</h3>
+
+                <p class="product-type">Imported</p>
+
+                <h4>₱150 <small>/ kg</small></h4>
+
+                <button onclick="addToCart('Fresh Apples')">
+                    + Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROMOTION -->
+    <section class="promotion">
+
+        <div>
+
+            <span>FRESH DEALS</span>
+
+            <h2>
+                Healthy Food<br>
+                For Every Home.
+            </h2>
+
+            <p>
+                Get fresh products delivered straight to your door.
+            </p>
+
+            <a href="#products" class="shop-button">
+                Explore Products →
+            </a>
+
+        </div>
+
+        <img src="images/vegetables.avif"
+             alt="Fresh groceries">
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="about section">
+
+        <span>ABOUT US</span>
+
+        <h2>Fresh products, simple shopping.</h2>
+
+        <p>
+            FreshNest is a simple online grocery store that provides
+            fresh fruits, vegetables and everyday products for customers.
+            We aim to make grocery shopping easier and more convenient.
+        </p>
+
+    </section>
+
+
+    <!-- SIGN IN -->
+    <section id="signin" class="form-section">
+
+        <div class="form-box">
+
+            <span>WELCOME BACK</span>
+
+            <h2>Sign In</h2>
+
+            <form onsubmit="return signIn()">
+
+                <input type="email" id="loginEmail"
+                       placeholder="Email Address">
+
+                <input type="password" id="loginPassword"
+                       placeholder="Password">
+
+                <button type="submit">Sign In</button>
+
+            </form>
+
+            <p id="loginMessage"></p>
+
+        </div>
+
+
+        <!-- SIGN UP -->
+        <div class="form-box">
+
+            <span>CREATE ACCOUNT</span>
+
+            <h2>Sign Up</h2>
+
+            <form onsubmit="return signUp()">
+
+                <input type="text" id="name"
+                       placeholder="Full Name">
+
+                <input type="email" id="email"
+                       placeholder="Email Address">
+
+                <input type="password" id="password"
+                       placeholder="Password">
+
+                <button type="submit">Create Account</button>
+
+            </form>
+
+            <p id="signupMessage"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- INQUIRY -->
+    <section id="contact" class="inquiry section">
+
+        <div>
+            <span>CONTACT US</span>
+
+            <h2>Have an inquiry?</h2>
+
+            <p>
+                Send us a message and we'll get back to you.
+            </p>
+        </div>
+
+
+        <form onsubmit="return sendInquiry()">
+
+            <input type="text" id="customerName"
+                   placeholder="Your Name">
+
+            <input type="email" id="customerEmail"
+                   placeholder="Your Email">
+
+            <textarea id="message"
+                      placeholder="Your message"></textarea>
+
+            <button type="submit">
+                Send Inquiry
+            </button>
+
+        </form>
+
+        <p id="inquiryMessage"></p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h2>FreshNest</h2>
+
+                <p>
+                    Fresh groceries for your everyday needs.
+                </p>
+            </div>
+
+
+            <div>
+                <h4>Quick Links</h4>
+
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+
+            <div>
+                <h4>Contact</h4>
+
+                <p>Email: FreshNest@gmail.com</p>
+                <p>Phone: 0963 685 1589</p>
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            © 2026 FreshNest. All Rights Reserved.
+        </div>
+
+    </footer>
+
+
+    <script src="0010MirandaScript.js"></script>
+
+</body>
+</html>
